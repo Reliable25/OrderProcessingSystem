@@ -7,14 +7,14 @@ Implements transactional order placement with pessimistic locking to avoid overs
 
 ## Contents
 
-- `src/OrderProcessing.API` — ASP.NET Core Web API
-- `src/OrderProcessing.Application` — Application layer (commands, handlers, DTOs)
-- `src/OrderProcessing.Domain` — Domain entities, events, interfaces
-- `src/OrderProcessing.Infrastructure` — EF Core, repositories, services, hosted jobs
-- `tests/OrderProcessing.Tests.Unit` — Unit tests
-- `tests/OrderProcessing.Tests.Integration` — Integration tests (uses in-process host + configured DB)
-- `docker-compose.yml` — Optional local Docker stack (SQL Server + API)
-- `scripts/init_db.sql` — SQL Server bootstrap script (optional)
+- `src/OrderProcessing.API` â€” ASP.NET Core Web API
+- `src/OrderProcessing.Application` â€” Application layer (commands, handlers, DTOs)
+- `src/OrderProcessing.Domain` â€” Domain entities, events, interfaces
+- `src/OrderProcessing.Infrastructure` â€” EF Core, repositories, services, hosted jobs
+- `tests/OrderProcessing.Tests.Unit` â€” Unit tests
+- `tests/OrderProcessing.Tests.Integration` â€” Integration tests (uses in-process host + configured DB)
+- `docker-compose.yml` â€” Optional local Docker stack (SQL Server + API)
+- `scripts/init_db.sql` â€” SQL Server bootstrap script (optional)
 
 ---
 
@@ -85,13 +85,17 @@ Key features:
 
 ## Database / Migrations
 
-- Current startup uses `EnsureCreated()` to allow running without EF migrations.
-- For production, generate EF migrations and use `Database.Migrate()`:
-  - dotnet tool install --global dotnet-ef
-  - dotnet ef migrations add InitialCreate -p src/OrderProcessing.Infrastructure -s src/OrderProcessing.API
-  - dotnet ef database update -p src/OrderProcessing.Infrastructure -s src/OrderProcessing.API
-
-If you prefer automatic migration at startup, replace `EnsureCreated()` with `Database.Migrate()` in `Program.cs` and commit migrations.
+- Startup behavior: the application applies EF Core migrations at startup using `Database.Migrate()` so the schema is kept in sync with committed migrations.
+- Development workflow:
+  1. Install EF tooling (if needed):
+     - `dotnet tool install --global dotnet-ef`
+  2. Create a migration after model changes:
+     - `dotnet ef migrations add <MigrationName> -p src/OrderProcessing.Infrastructure -s src/OrderProcessing.API`
+  3. Apply migrations to the database (local manual apply if desired):
+     - `dotnet ef database update -p src/OrderProcessing.Infrastructure -s src/OrderProcessing.API`
+- Important:
+  - Commit generated migration C# files to source control. `Database.Migrate()` at startup applies committed migrations automatically (recommended for production).
+  - Avoid relying on `EnsureCreated()` for schema evolutionâ€”use migrations to maintain history and compatibility.
 
 ---
 
@@ -114,7 +118,7 @@ Notes:
 
 ## Controller actions (summary)
 
-- `POST /api/orders` — Place new order
+- `POST /api/orders` â€” Place new order
   - Request: `PlaceOrderRequest` (customer info, items, optional `IdempotencyKey`)
   - Behavior:
     - Validates payload via FluentValidation
@@ -128,10 +132,10 @@ Notes:
     - 409 Conflict on insufficient stock or idempotency key misuse
     - 400 Bad Request for validation failures
 
-- `GET /api/orders/{id}` — Get order by id
+- `GET /api/orders/{id}` â€” Get order by id
 
-- `GET /api/products` — List active products (includes stock quantity)
-- `GET /api/products/{id}` — Get single product
+- `GET /api/products` â€” List active products (includes stock quantity)
+- `GET /api/products/{id}` â€” Get single product
 
 ---
 
