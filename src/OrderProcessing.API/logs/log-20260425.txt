@@ -1,0 +1,982 @@
+2026-04-25 11:04:40.683 +01:00 [INF] Starting up
+2026-04-25 11:04:44.191 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 11:04:58.461 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'OrderProcessing.Infrastructure.Persistence.AppDbContext'.
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-04-25 11:04:59.209 +01:00 [ERR] An error occurred while creating or seeding the database.
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at OrderProcessing.Infrastructure.Repositories.ProductRepository.GetAllActiveAsync(CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Repositories\ProductRepository.cs:line 52
+   at Program.<>c__DisplayClass0_1.<<<Main>$>b__3>d.MoveNext() in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 168
+--- End of stack trace from previous location ---
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 35
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 42
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 43
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 166
+2026-04-25 11:04:59.515 +01:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at OrderProcessing.Infrastructure.Repositories.ProductRepository.GetAllActiveAsync(CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Repositories\ProductRepository.cs:line 52
+   at Program.<>c__DisplayClass0_1.<<<Main>$>b__3>d.MoveNext() in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 168
+--- End of stack trace from previous location ---
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 35
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 42
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 43
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 166
+2026-04-25 11:06:01.057 +01:00 [INF] Starting up
+2026-04-25 11:06:03.469 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 11:06:11.899 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'OrderProcessing.Infrastructure.Persistence.AppDbContext'.
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-04-25 11:06:12.594 +01:00 [ERR] An error occurred while creating or seeding the database.
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at OrderProcessing.Infrastructure.Repositories.ProductRepository.GetAllActiveAsync(CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Repositories\ProductRepository.cs:line 52
+   at Program.<>c__DisplayClass0_1.<<<Main>$>b__3>d.MoveNext() in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 168
+--- End of stack trace from previous location ---
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 35
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 42
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 43
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 166
+2026-04-25 11:06:12.723 +01:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at OrderProcessing.Infrastructure.Repositories.ProductRepository.GetAllActiveAsync(CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Repositories\ProductRepository.cs:line 52
+   at Program.<>c__DisplayClass0_1.<<<Main>$>b__3>d.MoveNext() in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 168
+--- End of stack trace from previous location ---
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 35
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 42
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 43
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 166
+2026-04-25 11:07:21.510 +01:00 [INF] Starting up
+2026-04-25 11:07:25.022 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 11:07:33.676 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'OrderProcessing.Infrastructure.Persistence.AppDbContext'.
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-04-25 11:07:34.083 +01:00 [ERR] An error occurred while creating or seeding the database.
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at OrderProcessing.Infrastructure.Repositories.ProductRepository.GetAllActiveAsync(CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Repositories\ProductRepository.cs:line 52
+   at Program.<>c__DisplayClass0_1.<<<Main>$>b__3>d.MoveNext() in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 168
+--- End of stack trace from previous location ---
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 35
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 42
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 43
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 166
+2026-04-25 11:07:34.230 +01:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at OrderProcessing.Infrastructure.Repositories.ProductRepository.GetAllActiveAsync(CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Repositories\ProductRepository.cs:line 52
+   at Program.<>c__DisplayClass0_1.<<<Main>$>b__3>d.MoveNext() in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 168
+--- End of stack trace from previous location ---
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 35
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 42
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 43
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 166
+2026-04-25 11:08:10.059 +01:00 [INF] Starting up
+2026-04-25 11:08:12.478 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 11:08:19.408 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'OrderProcessing.Infrastructure.Persistence.AppDbContext'.
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-04-25 11:08:19.745 +01:00 [ERR] An error occurred while creating or seeding the database.
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at OrderProcessing.Infrastructure.Repositories.ProductRepository.GetAllActiveAsync(CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Repositories\ProductRepository.cs:line 52
+   at Program.<>c__DisplayClass0_1.<<<Main>$>b__3>d.MoveNext() in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 168
+--- End of stack trace from previous location ---
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 35
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 42
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 43
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 166
+2026-04-25 11:08:19.861 +01:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at OrderProcessing.Infrastructure.Repositories.ProductRepository.GetAllActiveAsync(CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Repositories\ProductRepository.cs:line 52
+   at Program.<>c__DisplayClass0_1.<<<Main>$>b__3>d.MoveNext() in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 168
+--- End of stack trace from previous location ---
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 35
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 42
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 43
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 166
+2026-04-25 11:09:15.560 +01:00 [INF] Starting up
+2026-04-25 11:09:18.839 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 11:09:31.170 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'OrderProcessing.Infrastructure.Persistence.AppDbContext'.
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-04-25 11:09:31.653 +01:00 [ERR] An error occurred while creating or seeding the database.
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at OrderProcessing.Infrastructure.Repositories.ProductRepository.GetAllActiveAsync(CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Repositories\ProductRepository.cs:line 52
+   at Program.<>c__DisplayClass0_1.<<<Main>$>b__3>d.MoveNext() in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 168
+--- End of stack trace from previous location ---
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 35
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 42
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 43
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 166
+2026-04-25 11:09:31.878 +01:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at OrderProcessing.Infrastructure.Repositories.ProductRepository.GetAllActiveAsync(CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Repositories\ProductRepository.cs:line 52
+   at Program.<>c__DisplayClass0_1.<<<Main>$>b__3>d.MoveNext() in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 168
+--- End of stack trace from previous location ---
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 35
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 42
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 43
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 166
+2026-04-25 11:20:00.095 +01:00 [INF] Starting up
+2026-04-25 11:20:05.449 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 11:20:25.419 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'OrderProcessing.Infrastructure.Persistence.AppDbContext'.
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-04-25 11:20:26.359 +01:00 [ERR] An error occurred while creating or seeding the database.
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at OrderProcessing.Infrastructure.Repositories.ProductRepository.GetAllActiveAsync(CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Repositories\ProductRepository.cs:line 52
+   at Program.<>c__DisplayClass0_1.<<<Main>$>b__3>d.MoveNext() in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 168
+--- End of stack trace from previous location ---
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 35
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 42
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 43
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 166
+2026-04-25 11:20:26.604 +01:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.OnFirstExecution()
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at OrderProcessing.Infrastructure.Repositories.ProductRepository.GetAllActiveAsync(CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Repositories\ProductRepository.cs:line 52
+   at Program.<>c__DisplayClass0_1.<<<Main>$>b__3>d.MoveNext() in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 168
+--- End of stack trace from previous location ---
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 35
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 42
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 43
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 166
+2026-04-25 11:25:11.222 +01:00 [INF] Starting up
+2026-04-25 11:25:14.183 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 11:25:21.898 +01:00 [INF] Seeded product -> Id: "c0d73bcc-a273-4cd9-a09e-c52a6ed86bf7", Name: Widget A, Stock: 100
+2026-04-25 11:25:21.916 +01:00 [INF] Seeded product -> Id: "33d06a56-6a6e-436a-bd74-03744189019d", Name: Widget B, Stock: 47
+2026-04-25 11:25:22.471 +01:00 [INF] IdempotencyCleanupService started. TTL: "30.00:00:00"
+2026-04-25 11:25:39.849 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-04-25 11:27:45.994 +01:00 [INF] Received PlaceOrder request for harogereadone@gmail.com with 1 items
+2026-04-25 11:27:55.890 +01:00 [ERR] Failed executing DbCommand (521ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (Size = 128), @p5='?' (DbType = Guid), @p6='?' (Size = 4000), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [IdempotencyRecords] ([Id], [CreatedAt], [FailureReason], [Key], [RequestHash], [ResourceId], [ResponsePayload], [Status], [UpdatedAt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-04-25 11:27:56.139 +01:00 [ERR] An exception occurred in the database while saving changes for context type 'OrderProcessing.Infrastructure.Persistence.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.IdempotencyRecords' with unique index 'IX_IdempotencyRecords_Key'. The duplicate key value is (001).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:b95c4eb3-daaa-46c2-aaca-d4c2aa55363e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.IdempotencyRecords' with unique index 'IX_IdempotencyRecords_Key'. The duplicate key value is (001).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:b95c4eb3-daaa-46c2-aaca-d4c2aa55363e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-25 11:28:32.507 +01:00 [INF] Received PlaceOrder request for harogereadone@gmail.com with 1 items
+2026-04-25 11:28:49.417 +01:00 [ERR] Failed executing DbCommand (381ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (Size = 128), @p5='?' (DbType = Guid), @p6='?' (Size = 4000), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [IdempotencyRecords] ([Id], [CreatedAt], [FailureReason], [Key], [RequestHash], [ResourceId], [ResponsePayload], [Status], [UpdatedAt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-04-25 11:28:49.438 +01:00 [ERR] An exception occurred in the database while saving changes for context type 'OrderProcessing.Infrastructure.Persistence.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.IdempotencyRecords' with unique index 'IX_IdempotencyRecords_Key'. The duplicate key value is (001).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:b95c4eb3-daaa-46c2-aaca-d4c2aa55363e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.IdempotencyRecords' with unique index 'IX_IdempotencyRecords_Key'. The duplicate key value is (001).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:b95c4eb3-daaa-46c2-aaca-d4c2aa55363e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-25 11:29:41.081 +01:00 [INF] Received PlaceOrder request for harogeread1one@gmail.com with 1 items
+2026-04-25 11:29:53.357 +01:00 [ERR] Failed executing DbCommand (243ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (Size = 128), @p5='?' (DbType = Guid), @p6='?' (Size = 4000), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [IdempotencyRecords] ([Id], [CreatedAt], [FailureReason], [Key], [RequestHash], [ResourceId], [ResponsePayload], [Status], [UpdatedAt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-04-25 11:29:53.405 +01:00 [ERR] An exception occurred in the database while saving changes for context type 'OrderProcessing.Infrastructure.Persistence.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.IdempotencyRecords' with unique index 'IX_IdempotencyRecords_Key'. The duplicate key value is (001).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:b95c4eb3-daaa-46c2-aaca-d4c2aa55363e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.IdempotencyRecords' with unique index 'IX_IdempotencyRecords_Key'. The duplicate key value is (001).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:b95c4eb3-daaa-46c2-aaca-d4c2aa55363e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-25 11:30:40.961 +01:00 [INF] Received PlaceOrder request for harogeread1one@gmail.com with 1 items
+2026-04-25 11:30:44.969 +01:00 [ERR] Failed executing DbCommand (512ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (Size = 128), @p5='?' (DbType = Guid), @p6='?' (Size = 4000), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [IdempotencyRecords] ([Id], [CreatedAt], [FailureReason], [Key], [RequestHash], [ResourceId], [ResponsePayload], [Status], [UpdatedAt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-04-25 11:30:44.991 +01:00 [ERR] An exception occurred in the database while saving changes for context type 'OrderProcessing.Infrastructure.Persistence.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.IdempotencyRecords' with unique index 'IX_IdempotencyRecords_Key'. The duplicate key value is (002).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:b95c4eb3-daaa-46c2-aaca-d4c2aa55363e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.IdempotencyRecords' with unique index 'IX_IdempotencyRecords_Key'. The duplicate key value is (002).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:b95c4eb3-daaa-46c2-aaca-d4c2aa55363e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-25 11:30:54.252 +01:00 [INF] Received PlaceOrder request for harogeread1one@gmail.com with 1 items
+2026-04-25 11:30:56.592 +01:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-04-25 11:30:57.987 +01:00 [WRN] Order placement failed: PRODUCT_NOT_FOUND:0a040117-08cd-4ad9-a077-c8a7b53d00c1
+2026-04-25 11:31:47.035 +01:00 [INF] Received PlaceOrder request for harogeread1one@gmail.com with 1 items
+2026-04-25 11:32:04.168 +01:00 [ERR] Failed executing DbCommand (219ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (Size = 128), @p5='?' (DbType = Guid), @p6='?' (Size = 4000), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [IdempotencyRecords] ([Id], [CreatedAt], [FailureReason], [Key], [RequestHash], [ResourceId], [ResponsePayload], [Status], [UpdatedAt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-04-25 11:32:04.193 +01:00 [ERR] An exception occurred in the database while saving changes for context type 'OrderProcessing.Infrastructure.Persistence.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.IdempotencyRecords' with unique index 'IX_IdempotencyRecords_Key'. The duplicate key value is (003).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:b95c4eb3-daaa-46c2-aaca-d4c2aa55363e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.IdempotencyRecords' with unique index 'IX_IdempotencyRecords_Key'. The duplicate key value is (003).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:b95c4eb3-daaa-46c2-aaca-d4c2aa55363e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-25 11:33:00.380 +01:00 [INF] Received PlaceOrder request for harogeread1one@gmail.com with 1 items
+2026-04-25 11:33:26.270 +01:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-04-25 11:34:00.148 +01:00 [INF] [EVENT] OrderPlaced received: OrderId="87417cfc-d60c-4bc7-9aa3-f0a37e3898d3", Customer=harogeread1one@gmail.com, Total=¤59.97, Items=1
+2026-04-25 11:34:06.152 +01:00 [INF] [PAYMENT] Initiating payment for Order "87417cfc-d60c-4bc7-9aa3-f0a37e3898d3", Amount: ¤59.97
+2026-04-25 11:34:07.174 +01:00 [INF] [SIM PAYMENT] Processing payment for Order "87417cfc-d60c-4bc7-9aa3-f0a37e3898d3" Amount=59.97
+2026-04-25 11:34:07.394 +01:00 [INF] [SIM PAYMENT] Payment processed for Order "87417cfc-d60c-4bc7-9aa3-f0a37e3898d3"
+2026-04-25 11:34:07.400 +01:00 [INF] [PAYMENT] Payment successful for Order "87417cfc-d60c-4bc7-9aa3-f0a37e3898d3".
+2026-04-25 11:35:03.574 +01:00 [INF] [INVENTORY] Confirming inventory update for Order "87417cfc-d60c-4bc7-9aa3-f0a37e3898d3".
+2026-04-25 11:35:03.587 +01:00 [INF] [INVENTORY] Stock reserved: ProductId="33d06a56-6a6e-436a-bd74-03744189019d", ProductName=Widget B, Quantity=3
+2026-04-25 11:35:03.679 +01:00 [INF] [INVENTORY] Inventory update confirmed for Order "87417cfc-d60c-4bc7-9aa3-f0a37e3898d3". 1 product(s) updated.
+2026-04-25 11:35:03.694 +01:00 [INF] [NOTIFICATION] Sending order confirmation to harogeread1one@gmail.com for Order "87417cfc-d60c-4bc7-9aa3-f0a37e3898d3".
+2026-04-25 11:35:03.706 +01:00 [INF] [SIM NOTIFICATION] Sending order confirmation to harogeread1one@gmail.com for Order "87417cfc-d60c-4bc7-9aa3-f0a37e3898d3" Amount=59.97
+2026-04-25 11:35:03.716 +01:00 [INF] [NOTIFICATION] Order confirmation sent to harogeread1one@gmail.com for Order "87417cfc-d60c-4bc7-9aa3-f0a37e3898d3".
+2026-04-25 12:16:04.550 +01:00 [INF] Starting up
+2026-04-25 12:16:08.990 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 12:16:20.205 +01:00 [ERR] Failed executing DbCommand (447ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[RowVersion], [p].[StockQuantity], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+ORDER BY [p].[Name]
+2026-04-25 12:16:20.632 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'OrderProcessing.Infrastructure.Persistence.AppDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'RowVersion'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:79585f53-d539-4b2e-adad-f81694927d64
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'RowVersion'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:79585f53-d539-4b2e-adad-f81694927d64
+Error Number:207,State:1,Class:16
+2026-04-25 12:16:22.808 +01:00 [ERR] An error occurred while creating or seeding the database.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'RowVersion'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at OrderProcessing.Infrastructure.Repositories.ProductRepository.GetAllActiveAsync(CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Repositories\ProductRepository.cs:line 52
+   at Program.<>c__DisplayClass0_1.<<<Main>$>b__2>d.MoveNext() in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 168
+--- End of stack trace from previous location ---
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 35
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 42
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 43
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 166
+ClientConnectionId:79585f53-d539-4b2e-adad-f81694927d64
+Error Number:207,State:1,Class:16
+2026-04-25 12:16:23.733 +01:00 [FTL] Host terminated unexpectedly
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'RowVersion'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at OrderProcessing.Infrastructure.Repositories.ProductRepository.GetAllActiveAsync(CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Repositories\ProductRepository.cs:line 52
+   at Program.<>c__DisplayClass0_1.<<<Main>$>b__2>d.MoveNext() in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 168
+--- End of stack trace from previous location ---
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 35
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 42
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 43
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 166
+ClientConnectionId:79585f53-d539-4b2e-adad-f81694927d64
+Error Number:207,State:1,Class:16
+2026-04-25 12:19:08.015 +01:00 [INF] Starting up
+2026-04-25 12:19:10.462 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 12:19:18.176 +01:00 [ERR] Failed executing DbCommand (266ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[RowVersion], [p].[StockQuantity], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+ORDER BY [p].[Name]
+2026-04-25 12:19:18.302 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'OrderProcessing.Infrastructure.Persistence.AppDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'RowVersion'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:06d778f1-376e-4819-a66c-49f439a33f0b
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'RowVersion'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:06d778f1-376e-4819-a66c-49f439a33f0b
+Error Number:207,State:1,Class:16
+2026-04-25 12:19:18.761 +01:00 [ERR] An error occurred while creating or seeding the database.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'RowVersion'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at OrderProcessing.Infrastructure.Repositories.ProductRepository.GetAllActiveAsync(CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Repositories\ProductRepository.cs:line 52
+   at Program.<>c__DisplayClass0_1.<<<Main>$>b__2>d.MoveNext() in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 168
+--- End of stack trace from previous location ---
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 35
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 42
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 43
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 166
+ClientConnectionId:06d778f1-376e-4819-a66c-49f439a33f0b
+Error Number:207,State:1,Class:16
+2026-04-25 12:19:18.926 +01:00 [FTL] Host terminated unexpectedly
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'RowVersion'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at OrderProcessing.Infrastructure.Repositories.ProductRepository.GetAllActiveAsync(CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Repositories\ProductRepository.cs:line 52
+   at Program.<>c__DisplayClass0_1.<<<Main>$>b__2>d.MoveNext() in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 168
+--- End of stack trace from previous location ---
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 35
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 42
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 43
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 166
+ClientConnectionId:06d778f1-376e-4819-a66c-49f439a33f0b
+Error Number:207,State:1,Class:16
+2026-04-25 12:20:24.962 +01:00 [INF] Starting up
+2026-04-25 12:20:26.675 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 12:20:36.056 +01:00 [INF] Seeded product -> Id: "c0d73bcc-a273-4cd9-a09e-c52a6ed86bf7", Name: Widget A, Stock: 100
+2026-04-25 12:20:36.074 +01:00 [INF] Seeded product -> Id: "33d06a56-6a6e-436a-bd74-03744189019d", Name: Widget B, Stock: 44
+2026-04-25 12:20:36.687 +01:00 [INF] IdempotencyCleanupService started. TTL: "30.00:00:00"
+2026-04-25 12:47:29.092 +01:00 [INF] Starting up
+2026-04-25 12:47:32.713 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 12:47:48.309 +01:00 [INF] Seeded product -> Id: "f379c0d8-e846-4d98-b30c-0d9a83c7b5e9", Name: Test Product, Stock: 10
+2026-04-25 12:47:48.346 +01:00 [INF] Seeded product -> Id: "5f507403-0644-43fb-b8d5-3784228b778b", Name: Test Product, Stock: 10
+2026-04-25 12:47:48.385 +01:00 [INF] Seeded product -> Id: "c0d73bcc-a273-4cd9-a09e-c52a6ed86bf7", Name: Widget A, Stock: 100
+2026-04-25 12:47:48.396 +01:00 [INF] Seeded product -> Id: "33d06a56-6a6e-436a-bd74-03744189019d", Name: Widget B, Stock: 44
+2026-04-25 12:47:50.821 +01:00 [INF] IdempotencyCleanupService started. TTL: "30.00:00:00"
+2026-04-25 12:48:16.720 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-04-25 12:50:46.201 +01:00 [INF] Starting up
+2026-04-25 12:50:49.215 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 12:51:01.798 +01:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-04-25 12:51:02.953 +01:00 [INF] Seeded product -> Id: "11111111-1111-1111-1111-111111111111", Name: Widget A, Stock: 100
+2026-04-25 12:51:02.972 +01:00 [INF] Seeded product -> Id: "22222222-2222-2222-2222-222222222222", Name: Widget B, Stock: 50
+2026-04-25 12:51:03.478 +01:00 [INF] IdempotencyCleanupService started. TTL: "30.00:00:00"
+2026-04-25 12:51:52.756 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-04-25 12:52:22.653 +01:00 [INF] Starting up
+2026-04-25 12:52:24.064 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 12:52:34.096 +01:00 [INF] Seeded product -> Id: "11111111-1111-1111-1111-111111111111", Name: Widget A, Stock: 100
+2026-04-25 12:52:34.117 +01:00 [INF] Seeded product -> Id: "22222222-2222-2222-2222-222222222222", Name: Widget B, Stock: 50
+2026-04-25 12:52:34.572 +01:00 [INF] IdempotencyCleanupService started. TTL: "30.00:00:00"
+2026-04-25 12:53:23.857 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-04-25 12:58:32.356 +01:00 [INF] Starting up
+2026-04-25 12:58:32.767 +01:00 [FTL] Host terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 151
+2026-04-25 12:59:16.716 +01:00 [INF] Starting up
+2026-04-25 12:59:16.911 +01:00 [FTL] Host terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 151
+2026-04-25 13:50:25.139 +01:00 [INF] Starting up
+2026-04-25 13:50:29.982 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 13:50:50.483 +01:00 [ERR] Failed executing DbCommand (203ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [IdempotencyRecords] (
+    [Id] uniqueidentifier NOT NULL,
+    [Key] nvarchar(256) NOT NULL,
+    [RequestHash] nvarchar(128) NOT NULL,
+    [ResourceId] uniqueidentifier NULL,
+    [ResponsePayload] nvarchar(max) NULL,
+    [Status] int NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NOT NULL,
+    [FailureReason] nvarchar(max) NULL,
+    CONSTRAINT [PK_IdempotencyRecords] PRIMARY KEY ([Id])
+);
+2026-04-25 13:50:51.617 +01:00 [ERR] An error occurred while creating or seeding the database.
+Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'IdempotencyRecords' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 122
+ClientConnectionId:3582093e-8c97-4c44-bb0f-93c128e82cf9
+Error Number:2714,State:6,Class:16
+2026-04-25 13:50:53.341 +01:00 [FTL] Host terminated unexpectedly
+Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'IdempotencyRecords' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 122
+ClientConnectionId:3582093e-8c97-4c44-bb0f-93c128e82cf9
+Error Number:2714,State:6,Class:16
+2026-04-25 13:51:48.409 +01:00 [INF] Starting up
+2026-04-25 13:51:50.599 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 13:51:57.248 +01:00 [ERR] Failed executing DbCommand (285ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [IdempotencyRecords] (
+    [Id] uniqueidentifier NOT NULL,
+    [Key] nvarchar(256) NOT NULL,
+    [RequestHash] nvarchar(128) NOT NULL,
+    [ResourceId] uniqueidentifier NULL,
+    [ResponsePayload] nvarchar(max) NULL,
+    [Status] int NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NOT NULL,
+    [FailureReason] nvarchar(max) NULL,
+    CONSTRAINT [PK_IdempotencyRecords] PRIMARY KEY ([Id])
+);
+2026-04-25 13:51:57.300 +01:00 [ERR] An error occurred while creating or seeding the database.
+Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'IdempotencyRecords' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 122
+ClientConnectionId:8554ed01-3556-4991-a2eb-5bc2f1f8d0eb
+Error Number:2714,State:6,Class:16
+2026-04-25 13:51:57.441 +01:00 [FTL] Host terminated unexpectedly
+Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'IdempotencyRecords' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 122
+ClientConnectionId:8554ed01-3556-4991-a2eb-5bc2f1f8d0eb
+Error Number:2714,State:6,Class:16
+2026-04-25 13:54:55.907 +01:00 [INF] Starting up
+2026-04-25 13:54:58.782 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 13:55:06.449 +01:00 [INF] Seeded product -> Id: "11111111-1111-1111-1111-111111111111", Name: Widget A, Stock: 100
+2026-04-25 13:55:06.461 +01:00 [INF] Seeded product -> Id: "22222222-2222-2222-2222-222222222222", Name: Widget B, Stock: 50
+2026-04-25 13:55:07.015 +01:00 [INF] IdempotencyCleanupService started. TTL: "30.00:00:00"
+2026-04-25 14:08:55.080 +01:00 [INF] Starting up
+2026-04-25 14:08:55.270 +01:00 [FTL] Host terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 109
+2026-04-25 14:11:58.829 +01:00 [INF] Starting up
+2026-04-25 14:11:59.377 +01:00 [FTL] Host terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 109
+2026-04-25 14:12:48.055 +01:00 [INF] Starting up
+2026-04-25 14:12:48.237 +01:00 [FTL] Host terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 109
+2026-04-25 14:14:03.593 +01:00 [INF] Starting up
+2026-04-25 14:14:03.783 +01:00 [FTL] Host terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 109
+2026-04-25 14:19:42.751 +01:00 [INF] Starting up
+2026-04-25 14:19:45.080 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 14:19:56.364 +01:00 [ERR] Failed executing DbCommand (346ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [db49278];
+2026-04-25 14:19:56.482 +01:00 [ERR] An error occurred while creating or seeding the database.
+Microsoft.Data.SqlClient.SqlException (0x80131904): CREATE DATABASE permission denied in database 'master'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Create()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 121
+ClientConnectionId:e87e1b20-7716-40a2-ad30-6d45bca46bfc
+Error Number:262,State:1,Class:14
+2026-04-25 14:19:56.765 +01:00 [FTL] Host terminated unexpectedly
+Microsoft.Data.SqlClient.SqlException (0x80131904): CREATE DATABASE permission denied in database 'master'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Create()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 121
+ClientConnectionId:e87e1b20-7716-40a2-ad30-6d45bca46bfc
+Error Number:262,State:1,Class:14
+2026-04-25 14:20:38.399 +01:00 [INF] Starting up
+2026-04-25 14:20:38.565 +01:00 [FTL] Host terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 109
+2026-04-25 14:49:24.296 +01:00 [INF] Starting up
+2026-04-25 14:49:28.111 +01:00 [INF] Using connection string: Data Source= db49437.public.databaseasp.net;Initial Catalog=db49437; user id = db49437; password = C-y36bP%pM=4;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 14:49:53.701 +01:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-04-25 14:49:55.107 +01:00 [INF] Seeded product -> Id: "11111111-1111-1111-1111-111111111111", Name: Widget A, Stock: 100
+2026-04-25 14:49:55.126 +01:00 [INF] Seeded product -> Id: "22222222-2222-2222-2222-222222222222", Name: Widget B, Stock: 50
+2026-04-25 14:49:56.281 +01:00 [INF] IdempotencyCleanupService started. TTL: "30.00:00:00"
+2026-04-25 14:50:45.319 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-04-25 14:52:37.316 +01:00 [INF] Received PlaceOrder request for harogereadone@gmail.com with 1 items
+2026-04-25 14:52:42.955 +01:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-04-25 14:52:43.702 +01:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-04-25 14:52:53.568 +01:00 [INF] [EVENT] OrderPlaced received: OrderId="aae3be31-111c-4892-99ff-c53316bfd4c9", Customer=harogereadone@gmail.com, Total=¤19.98, Items=1
+2026-04-25 14:52:53.602 +01:00 [INF] [PAYMENT] Initiating payment for Order "aae3be31-111c-4892-99ff-c53316bfd4c9", Amount: ¤19.98
+2026-04-25 14:52:54.698 +01:00 [INF] [SIM PAYMENT] Processing payment for Order "aae3be31-111c-4892-99ff-c53316bfd4c9" Amount=19.98
+2026-04-25 14:52:54.932 +01:00 [INF] [SIM PAYMENT] Payment processed for Order "aae3be31-111c-4892-99ff-c53316bfd4c9"
+2026-04-25 14:52:54.947 +01:00 [INF] [PAYMENT] Payment successful for Order "aae3be31-111c-4892-99ff-c53316bfd4c9".
+2026-04-25 14:52:55.706 +01:00 [INF] [INVENTORY] Confirming inventory update for Order "aae3be31-111c-4892-99ff-c53316bfd4c9".
+2026-04-25 14:52:55.715 +01:00 [INF] [INVENTORY] Stock reserved: ProductId="11111111-1111-1111-1111-111111111111", ProductName=Widget A, Quantity=2
+2026-04-25 14:52:55.741 +01:00 [INF] [INVENTORY] Inventory update confirmed for Order "aae3be31-111c-4892-99ff-c53316bfd4c9". 1 product(s) updated.
+2026-04-25 14:52:55.752 +01:00 [INF] [NOTIFICATION] Sending order confirmation to harogereadone@gmail.com for Order "aae3be31-111c-4892-99ff-c53316bfd4c9".
+2026-04-25 14:52:55.764 +01:00 [INF] [SIM NOTIFICATION] Sending order confirmation to harogereadone@gmail.com for Order "aae3be31-111c-4892-99ff-c53316bfd4c9" Amount=19.98
+2026-04-25 14:52:55.775 +01:00 [INF] [NOTIFICATION] Order confirmation sent to harogereadone@gmail.com for Order "aae3be31-111c-4892-99ff-c53316bfd4c9".
+2026-04-25 15:07:35.705 +01:00 [INF] Starting up
+2026-04-25 15:07:38.431 +01:00 [INF] Using connection string: Data Source= db49437.public.databaseasp.net;Initial Catalog=db49437; user id = db49437; password = C-y36bP%pM=4;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 15:07:51.729 +01:00 [INF] Seeded product -> Id: "11111111-1111-1111-1111-111111111111", Name: Widget A, Stock: 8
+2026-04-25 15:07:51.749 +01:00 [INF] Seeded product -> Id: "22222222-2222-2222-2222-222222222222", Name: Widget B, Stock: 50
+2026-04-25 15:07:53.047 +01:00 [INF] IdempotencyCleanupService started. TTL: "30.00:00:00"

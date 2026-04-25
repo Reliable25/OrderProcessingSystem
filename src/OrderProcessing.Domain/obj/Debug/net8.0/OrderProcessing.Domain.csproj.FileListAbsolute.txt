@@ -1,0 +1,12 @@
+C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Domain\bin\Debug\net8.0\OrderProcessing.Domain.deps.json
+C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Domain\bin\Debug\net8.0\OrderProcessing.Domain.dll
+C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Domain\bin\Debug\net8.0\OrderProcessing.Domain.pdb
+C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Domain\obj\Debug\net8.0\OrderProcessing.Domain.csproj.AssemblyReference.cache
+C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Domain\obj\Debug\net8.0\OrderProcessing.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Domain\obj\Debug\net8.0\OrderProcessing.Domain.AssemblyInfoInputs.cache
+C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Domain\obj\Debug\net8.0\OrderProcessing.Domain.AssemblyInfo.cs
+C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Domain\obj\Debug\net8.0\OrderProcessing.Domain.csproj.CoreCompileInputs.cache
+C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Domain\obj\Debug\net8.0\OrderProcessing.Domain.dll
+C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Domain\obj\Debug\net8.0\refint\OrderProcessing.Domain.dll
+C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Domain\obj\Debug\net8.0\OrderProcessing.Domain.pdb
+C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Domain\obj\Debug\net8.0\ref\OrderProcessing.Domain.dll

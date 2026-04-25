@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OrderProcessing.API</name>
+    </assembly>
+    <members>
+        <member name="M:OrderProcessing.API.Controller.OrdersController.PlaceOrder(OrderProcessing.Application.DTOs.PlaceOrderRequest,System.Threading.CancellationToken)">
+            <summary>
+            Place a new order.
+            </summary>
+            <remarks>
+            Validates product existence and stock availability. Supports client-provided idempotency key
+            so retries return the same result. Returns 201 with created order on success.
+            </remarks>
+            <param name="request">Order payload including customer and items.</param>
+            <param name="cancellationToken">Cancellation token.</param>
+            <returns>Created order or error information.</returns>
+        </member>
+        <member name="M:OrderProcessing.API.Controller.OrdersController.GetOrder(System.Guid)">
+            <summary>
+            Get an order by id.
+            </summary>
+            <param name="id">Order GUID.</param>
+            <returns>Order details or 404 if not found.</returns>
+        </member>
+        <member name="M:OrderProcessing.API.Controller.ProductsController.GetAll">
+            <summary>
+            Returns all active products with current stock.
+            Useful to discover product ids for placing orders.
+            </summary>
+        </member>
+        <member name="M:OrderProcessing.API.Controller.ProductsController.Get(System.Guid)">
+            <summary>
+            Returns a single product by id.
+            </summary>
+        </member>
+    </members>
+</doc>

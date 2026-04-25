@@ -1,0 +1,352 @@
+2026-04-25 11:56:38.824 +01:00 [INF] Starting up
+2026-04-25 11:56:39.158 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 11:56:42.816 +01:00 [INF] Seeded product -> Id: "c0d73bcc-a273-4cd9-a09e-c52a6ed86bf7", Name: Widget A, Stock: 100
+2026-04-25 11:56:42.820 +01:00 [INF] Seeded product -> Id: "33d06a56-6a6e-436a-bd74-03744189019d", Name: Widget B, Stock: 44
+2026-04-25 11:56:42.903 +01:00 [INF] IdempotencyCleanupService started. TTL: "30.00:00:00"
+2026-04-25 11:56:44.460 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-04-25 11:56:44.557 +01:00 [INF] Received PlaceOrder request for user0@example.com with 1 items
+2026-04-25 11:56:44.557 +01:00 [INF] Received PlaceOrder request for user2@example.com with 1 items
+2026-04-25 11:56:44.557 +01:00 [INF] Received PlaceOrder request for user5@example.com with 1 items
+2026-04-25 11:56:44.557 +01:00 [INF] Received PlaceOrder request for user1@example.com with 1 items
+2026-04-25 11:56:44.557 +01:00 [INF] Received PlaceOrder request for user3@example.com with 1 items
+2026-04-25 11:56:44.557 +01:00 [INF] Received PlaceOrder request for user4@example.com with 1 items
+2026-04-25 11:56:44.996 +01:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-04-25 11:56:45.290 +01:00 [WRN] Order placement failed: PRODUCT_NOT_FOUND:11111111-1111-1111-1111-111111111111
+2026-04-25 11:56:45.454 +01:00 [WRN] Order placement failed: PRODUCT_NOT_FOUND:11111111-1111-1111-1111-111111111111
+2026-04-25 11:56:46.075 +01:00 [WRN] Order placement failed: PRODUCT_NOT_FOUND:11111111-1111-1111-1111-111111111111
+2026-04-25 11:56:46.209 +01:00 [WRN] Order placement failed: PRODUCT_NOT_FOUND:11111111-1111-1111-1111-111111111111
+2026-04-25 11:56:46.349 +01:00 [WRN] Order placement failed: PRODUCT_NOT_FOUND:11111111-1111-1111-1111-111111111111
+2026-04-25 11:56:46.814 +01:00 [WRN] Order placement failed: PRODUCT_NOT_FOUND:11111111-1111-1111-1111-111111111111
+2026-04-25 12:10:32.076 +01:00 [INF] Starting up
+2026-04-25 12:10:32.355 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 12:10:35.599 +01:00 [ERR] Failed executing DbCommand (220ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[RowVersion], [p].[StockQuantity], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+ORDER BY [p].[Name]
+2026-04-25 12:10:35.624 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'OrderProcessing.Infrastructure.Persistence.AppDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'RowVersion'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:199baa18-0ed4-4ad4-abcd-11d0489d440d
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'RowVersion'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:199baa18-0ed4-4ad4-abcd-11d0489d440d
+Error Number:207,State:1,Class:16
+2026-04-25 12:10:35.793 +01:00 [ERR] An error occurred while creating or seeding the database.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'RowVersion'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at OrderProcessing.Infrastructure.Repositories.ProductRepository.GetAllActiveAsync(CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Repositories\ProductRepository.cs:line 52
+   at Program.<>c__DisplayClass0_1.<<<Main>$>b__2>d.MoveNext() in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 168
+--- End of stack trace from previous location ---
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 35
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 42
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 43
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 166
+ClientConnectionId:199baa18-0ed4-4ad4-abcd-11d0489d440d
+Error Number:207,State:1,Class:16
+2026-04-25 12:10:35.837 +01:00 [FTL] Host terminated unexpectedly
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'RowVersion'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at OrderProcessing.Infrastructure.Repositories.ProductRepository.GetAllActiveAsync(CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Repositories\ProductRepository.cs:line 52
+   at Program.<>c__DisplayClass0_1.<<<Main>$>b__2>d.MoveNext() in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 168
+--- End of stack trace from previous location ---
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 35
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 42
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 43
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 166
+ClientConnectionId:199baa18-0ed4-4ad4-abcd-11d0489d440d
+Error Number:207,State:1,Class:16
+2026-04-25 12:14:40.753 +01:00 [INF] Starting up
+2026-04-25 12:14:41.042 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 12:14:44.007 +01:00 [ERR] Failed executing DbCommand (185ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[RowVersion], [p].[StockQuantity], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+ORDER BY [p].[Name]
+2026-04-25 12:14:44.026 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'OrderProcessing.Infrastructure.Persistence.AppDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'RowVersion'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:d8a58003-0f1f-4b99-835c-bf8231f0fdbd
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'RowVersion'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:d8a58003-0f1f-4b99-835c-bf8231f0fdbd
+Error Number:207,State:1,Class:16
+2026-04-25 12:14:44.181 +01:00 [ERR] An error occurred while creating or seeding the database.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'RowVersion'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at OrderProcessing.Infrastructure.Repositories.ProductRepository.GetAllActiveAsync(CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Repositories\ProductRepository.cs:line 52
+   at Program.<>c__DisplayClass0_1.<<<Main>$>b__2>d.MoveNext() in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 168
+--- End of stack trace from previous location ---
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 35
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 42
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 43
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 166
+ClientConnectionId:d8a58003-0f1f-4b99-835c-bf8231f0fdbd
+Error Number:207,State:1,Class:16
+2026-04-25 12:14:44.214 +01:00 [FTL] Host terminated unexpectedly
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'RowVersion'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at OrderProcessing.Infrastructure.Repositories.ProductRepository.GetAllActiveAsync(CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Repositories\ProductRepository.cs:line 52
+   at Program.<>c__DisplayClass0_1.<<<Main>$>b__2>d.MoveNext() in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 168
+--- End of stack trace from previous location ---
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 35
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 42
+   at OrderProcessing.Infrastructure.Persistence.UnitOfWork.ExecuteInTransactionAsync(Func`1 action, CancellationToken cancellationToken) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.Infrastructure\Persistence\UnitOfWork.cs:line 43
+   at Program.<Main>$(String[] args) in C:\PillarSalt Project\New folder\4596b6c8-1754-4e23-8aea-5a5d84dab043\OrderProcessing\src\OrderProcessing.API\Program.cs:line 166
+ClientConnectionId:d8a58003-0f1f-4b99-835c-bf8231f0fdbd
+Error Number:207,State:1,Class:16
+2026-04-25 12:31:06.221 +01:00 [INF] Starting up
+2026-04-25 12:31:06.466 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 12:31:12.468 +01:00 [INF] Seeded product -> Id: "c0d73bcc-a273-4cd9-a09e-c52a6ed86bf7", Name: Widget A, Stock: 100
+2026-04-25 12:31:12.470 +01:00 [INF] Seeded product -> Id: "33d06a56-6a6e-436a-bd74-03744189019d", Name: Widget B, Stock: 44
+2026-04-25 12:31:12.572 +01:00 [INF] IdempotencyCleanupService started. TTL: "30.00:00:00"
+2026-04-25 12:31:14.882 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-04-25 12:31:14.990 +01:00 [INF] Received PlaceOrder request for user1@test.com with 1 items
+2026-04-25 12:31:14.990 +01:00 [INF] Received PlaceOrder request for user0@test.com with 1 items
+2026-04-25 12:31:14.990 +01:00 [INF] Received PlaceOrder request for user3@test.com with 1 items
+2026-04-25 12:31:14.990 +01:00 [INF] Received PlaceOrder request for user4@test.com with 1 items
+2026-04-25 12:31:14.990 +01:00 [INF] Received PlaceOrder request for user5@test.com with 1 items
+2026-04-25 12:31:14.990 +01:00 [INF] Received PlaceOrder request for user2@test.com with 1 items
+2026-04-25 12:31:15.610 +01:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-04-25 12:31:15.874 +01:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-04-25 12:31:16.186 +01:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-04-25 12:31:16.490 +01:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-04-25 12:31:16.571 +01:00 [INF] [EVENT] OrderPlaced received: OrderId="a98f948e-8ba8-41ff-8df0-dc124c772c8a", Customer=user3@test.com, Total=¤300.00, Items=1
+2026-04-25 12:31:16.576 +01:00 [INF] [PAYMENT] Initiating payment for Order "a98f948e-8ba8-41ff-8df0-dc124c772c8a", Amount: ¤300.00
+2026-04-25 12:31:16.824 +01:00 [INF] [EVENT] OrderPlaced received: OrderId="538bf8cb-b857-49f6-84d6-0e35dfd8c907", Customer=user2@test.com, Total=¤300.00, Items=1
+2026-04-25 12:31:16.824 +01:00 [INF] [PAYMENT] Initiating payment for Order "538bf8cb-b857-49f6-84d6-0e35dfd8c907", Amount: ¤300.00
+2026-04-25 12:31:16.977 +01:00 [INF] [SIM PAYMENT] Processing payment for Order "a98f948e-8ba8-41ff-8df0-dc124c772c8a" Amount=300.00
+2026-04-25 12:31:17.127 +01:00 [INF] [EVENT] OrderPlaced received: OrderId="0df7bbd2-a3ff-41df-b94a-dd55f4fbb4fe", Customer=user1@test.com, Total=¤300.00, Items=1
+2026-04-25 12:31:17.127 +01:00 [INF] [SIM PAYMENT] Processing payment for Order "538bf8cb-b857-49f6-84d6-0e35dfd8c907" Amount=300.00
+2026-04-25 12:31:17.128 +01:00 [INF] [PAYMENT] Initiating payment for Order "0df7bbd2-a3ff-41df-b94a-dd55f4fbb4fe", Amount: ¤300.00
+2026-04-25 12:31:17.184 +01:00 [INF] [SIM PAYMENT] Payment processed for Order "a98f948e-8ba8-41ff-8df0-dc124c772c8a"
+2026-04-25 12:31:17.185 +01:00 [INF] [PAYMENT] Payment successful for Order "a98f948e-8ba8-41ff-8df0-dc124c772c8a".
+2026-04-25 12:31:17.340 +01:00 [INF] [SIM PAYMENT] Payment processed for Order "538bf8cb-b857-49f6-84d6-0e35dfd8c907"
+2026-04-25 12:31:17.340 +01:00 [INF] [PAYMENT] Payment successful for Order "538bf8cb-b857-49f6-84d6-0e35dfd8c907".
+2026-04-25 12:31:17.343 +01:00 [INF] [INVENTORY] Confirming inventory update for Order "a98f948e-8ba8-41ff-8df0-dc124c772c8a".
+2026-04-25 12:31:17.345 +01:00 [INF] [INVENTORY] Stock reserved: ProductId="f379c0d8-e846-4d98-b30c-0d9a83c7b5e9", ProductName=Test Product, Quantity=30
+2026-04-25 12:31:17.370 +01:00 [INF] [INVENTORY] Inventory update confirmed for Order "a98f948e-8ba8-41ff-8df0-dc124c772c8a". 1 product(s) updated.
+2026-04-25 12:31:17.371 +01:00 [INF] [NOTIFICATION] Sending order confirmation to user3@test.com for Order "a98f948e-8ba8-41ff-8df0-dc124c772c8a".
+2026-04-25 12:31:17.372 +01:00 [INF] [SIM NOTIFICATION] Sending order confirmation to user3@test.com for Order "a98f948e-8ba8-41ff-8df0-dc124c772c8a" Amount=300.00
+2026-04-25 12:31:17.373 +01:00 [INF] [NOTIFICATION] Order confirmation sent to user3@test.com for Order "a98f948e-8ba8-41ff-8df0-dc124c772c8a".
+2026-04-25 12:31:17.453 +01:00 [INF] [SIM PAYMENT] Processing payment for Order "0df7bbd2-a3ff-41df-b94a-dd55f4fbb4fe" Amount=300.00
+2026-04-25 12:31:17.456 +01:00 [WRN] Order placement failed: INSUFFICIENT_STOCK:f379c0d8-e846-4d98-b30c-0d9a83c7b5e9
+2026-04-25 12:31:17.500 +01:00 [INF] [INVENTORY] Confirming inventory update for Order "538bf8cb-b857-49f6-84d6-0e35dfd8c907".
+2026-04-25 12:31:17.501 +01:00 [INF] [INVENTORY] Stock reserved: ProductId="f379c0d8-e846-4d98-b30c-0d9a83c7b5e9", ProductName=Test Product, Quantity=30
+2026-04-25 12:31:17.512 +01:00 [INF] [INVENTORY] Inventory update confirmed for Order "538bf8cb-b857-49f6-84d6-0e35dfd8c907". 1 product(s) updated.
+2026-04-25 12:31:17.512 +01:00 [INF] [NOTIFICATION] Sending order confirmation to user2@test.com for Order "538bf8cb-b857-49f6-84d6-0e35dfd8c907".
+2026-04-25 12:31:17.512 +01:00 [INF] [SIM NOTIFICATION] Sending order confirmation to user2@test.com for Order "538bf8cb-b857-49f6-84d6-0e35dfd8c907" Amount=300.00
+2026-04-25 12:31:17.513 +01:00 [INF] [NOTIFICATION] Order confirmation sent to user2@test.com for Order "538bf8cb-b857-49f6-84d6-0e35dfd8c907".
+2026-04-25 12:31:17.667 +01:00 [INF] [SIM PAYMENT] Payment processed for Order "0df7bbd2-a3ff-41df-b94a-dd55f4fbb4fe"
+2026-04-25 12:31:17.668 +01:00 [INF] [PAYMENT] Payment successful for Order "0df7bbd2-a3ff-41df-b94a-dd55f4fbb4fe".
+2026-04-25 12:31:17.829 +01:00 [INF] [INVENTORY] Confirming inventory update for Order "0df7bbd2-a3ff-41df-b94a-dd55f4fbb4fe".
+2026-04-25 12:31:17.830 +01:00 [INF] [INVENTORY] Stock reserved: ProductId="f379c0d8-e846-4d98-b30c-0d9a83c7b5e9", ProductName=Test Product, Quantity=30
+2026-04-25 12:31:17.851 +01:00 [INF] [INVENTORY] Inventory update confirmed for Order "0df7bbd2-a3ff-41df-b94a-dd55f4fbb4fe". 1 product(s) updated.
+2026-04-25 12:31:17.851 +01:00 [INF] [NOTIFICATION] Sending order confirmation to user1@test.com for Order "0df7bbd2-a3ff-41df-b94a-dd55f4fbb4fe".
+2026-04-25 12:31:17.851 +01:00 [INF] [SIM NOTIFICATION] Sending order confirmation to user1@test.com for Order "0df7bbd2-a3ff-41df-b94a-dd55f4fbb4fe" Amount=300.00
+2026-04-25 12:31:17.851 +01:00 [INF] [NOTIFICATION] Order confirmation sent to user1@test.com for Order "0df7bbd2-a3ff-41df-b94a-dd55f4fbb4fe".
+2026-04-25 12:31:18.230 +01:00 [WRN] Order placement failed: INSUFFICIENT_STOCK:f379c0d8-e846-4d98-b30c-0d9a83c7b5e9
+2026-04-25 12:31:18.372 +01:00 [WRN] Order placement failed: INSUFFICIENT_STOCK:f379c0d8-e846-4d98-b30c-0d9a83c7b5e9
+2026-04-25 12:38:51.887 +01:00 [INF] Starting up
+2026-04-25 12:38:52.343 +01:00 [INF] Using connection string: Data Source= db49278.public.databaseasp.net;Initial Catalog=db49278; user id = db49278; password = 8Tt@_h6ZD4+q;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 12:38:57.416 +01:00 [INF] Seeded product -> Id: "f379c0d8-e846-4d98-b30c-0d9a83c7b5e9", Name: Test Product, Stock: 10
+2026-04-25 12:38:57.420 +01:00 [INF] Seeded product -> Id: "c0d73bcc-a273-4cd9-a09e-c52a6ed86bf7", Name: Widget A, Stock: 100
+2026-04-25 12:38:57.420 +01:00 [INF] Seeded product -> Id: "33d06a56-6a6e-436a-bd74-03744189019d", Name: Widget B, Stock: 44
+2026-04-25 12:38:57.535 +01:00 [INF] IdempotencyCleanupService started. TTL: "30.00:00:00"
+2026-04-25 12:38:59.877 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-04-25 12:38:59.965 +01:00 [INF] Received PlaceOrder request for user2@test.com with 1 items
+2026-04-25 12:38:59.965 +01:00 [INF] Received PlaceOrder request for user4@test.com with 1 items
+2026-04-25 12:38:59.965 +01:00 [INF] Received PlaceOrder request for user5@test.com with 1 items
+2026-04-25 12:38:59.965 +01:00 [INF] Received PlaceOrder request for user1@test.com with 1 items
+2026-04-25 12:38:59.965 +01:00 [INF] Received PlaceOrder request for user0@test.com with 1 items
+2026-04-25 12:38:59.965 +01:00 [INF] Received PlaceOrder request for user3@test.com with 1 items
+2026-04-25 12:39:01.048 +01:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-04-25 12:39:01.618 +01:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-04-25 12:39:02.281 +01:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-04-25 12:39:02.596 +01:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-04-25 12:39:02.669 +01:00 [INF] [EVENT] OrderPlaced received: OrderId="3f7dfce1-2631-438c-bd9e-05e081bcbf2d", Customer=user1@test.com, Total=¤300.00, Items=1
+2026-04-25 12:39:02.674 +01:00 [INF] [PAYMENT] Initiating payment for Order "3f7dfce1-2631-438c-bd9e-05e081bcbf2d", Amount: ¤300.00
+2026-04-25 12:39:02.890 +01:00 [INF] [EVENT] OrderPlaced received: OrderId="e4b10d94-84a3-48e2-a146-ebaf73d86ce3", Customer=user5@test.com, Total=¤300.00, Items=1
+2026-04-25 12:39:02.890 +01:00 [INF] [PAYMENT] Initiating payment for Order "e4b10d94-84a3-48e2-a146-ebaf73d86ce3", Amount: ¤300.00
+2026-04-25 12:39:03.088 +01:00 [INF] [SIM PAYMENT] Processing payment for Order "3f7dfce1-2631-438c-bd9e-05e081bcbf2d" Amount=300.00
+2026-04-25 12:39:03.221 +01:00 [INF] [SIM PAYMENT] Processing payment for Order "e4b10d94-84a3-48e2-a146-ebaf73d86ce3" Amount=300.00
+2026-04-25 12:39:03.297 +01:00 [INF] [SIM PAYMENT] Payment processed for Order "3f7dfce1-2631-438c-bd9e-05e081bcbf2d"
+2026-04-25 12:39:03.298 +01:00 [INF] [PAYMENT] Payment successful for Order "3f7dfce1-2631-438c-bd9e-05e081bcbf2d".
+2026-04-25 12:39:03.435 +01:00 [INF] [SIM PAYMENT] Payment processed for Order "e4b10d94-84a3-48e2-a146-ebaf73d86ce3"
+2026-04-25 12:39:03.436 +01:00 [INF] [PAYMENT] Payment successful for Order "e4b10d94-84a3-48e2-a146-ebaf73d86ce3".
+2026-04-25 12:39:03.445 +01:00 [INF] [INVENTORY] Confirming inventory update for Order "3f7dfce1-2631-438c-bd9e-05e081bcbf2d".
+2026-04-25 12:39:03.446 +01:00 [INF] [INVENTORY] Stock reserved: ProductId="5f507403-0644-43fb-b8d5-3784228b778b", ProductName=Test Product, Quantity=30
+2026-04-25 12:39:03.466 +01:00 [INF] [INVENTORY] Inventory update confirmed for Order "3f7dfce1-2631-438c-bd9e-05e081bcbf2d". 1 product(s) updated.
+2026-04-25 12:39:03.468 +01:00 [INF] [NOTIFICATION] Sending order confirmation to user1@test.com for Order "3f7dfce1-2631-438c-bd9e-05e081bcbf2d".
+2026-04-25 12:39:03.469 +01:00 [INF] [SIM NOTIFICATION] Sending order confirmation to user1@test.com for Order "3f7dfce1-2631-438c-bd9e-05e081bcbf2d" Amount=300.00
+2026-04-25 12:39:03.470 +01:00 [INF] [NOTIFICATION] Order confirmation sent to user1@test.com for Order "3f7dfce1-2631-438c-bd9e-05e081bcbf2d".
+2026-04-25 12:39:03.493 +01:00 [WRN] Order placement failed: INSUFFICIENT_STOCK:5f507403-0644-43fb-b8d5-3784228b778b
+2026-04-25 12:39:03.588 +01:00 [INF] [INVENTORY] Confirming inventory update for Order "e4b10d94-84a3-48e2-a146-ebaf73d86ce3".
+2026-04-25 12:39:03.588 +01:00 [INF] [INVENTORY] Stock reserved: ProductId="5f507403-0644-43fb-b8d5-3784228b778b", ProductName=Test Product, Quantity=30
+2026-04-25 12:39:03.604 +01:00 [INF] [INVENTORY] Inventory update confirmed for Order "e4b10d94-84a3-48e2-a146-ebaf73d86ce3". 1 product(s) updated.
+2026-04-25 12:39:03.606 +01:00 [INF] [NOTIFICATION] Sending order confirmation to user5@test.com for Order "e4b10d94-84a3-48e2-a146-ebaf73d86ce3".
+2026-04-25 12:39:03.606 +01:00 [INF] [SIM NOTIFICATION] Sending order confirmation to user5@test.com for Order "e4b10d94-84a3-48e2-a146-ebaf73d86ce3" Amount=300.00
+2026-04-25 12:39:03.608 +01:00 [INF] [NOTIFICATION] Order confirmation sent to user5@test.com for Order "e4b10d94-84a3-48e2-a146-ebaf73d86ce3".
+2026-04-25 12:39:03.635 +01:00 [WRN] Order placement failed: INSUFFICIENT_STOCK:5f507403-0644-43fb-b8d5-3784228b778b
+2026-04-25 12:39:03.973 +01:00 [INF] [EVENT] OrderPlaced received: OrderId="9e98eb5f-c187-4d52-855b-6e6e42e4540f", Customer=user3@test.com, Total=¤300.00, Items=1
+2026-04-25 12:39:03.974 +01:00 [INF] [PAYMENT] Initiating payment for Order "9e98eb5f-c187-4d52-855b-6e6e42e4540f", Amount: ¤300.00
+2026-04-25 12:39:04.250 +01:00 [WRN] Order placement failed: INSUFFICIENT_STOCK:5f507403-0644-43fb-b8d5-3784228b778b
+2026-04-25 12:39:04.268 +01:00 [INF] [SIM PAYMENT] Processing payment for Order "9e98eb5f-c187-4d52-855b-6e6e42e4540f" Amount=300.00
+2026-04-25 12:39:04.476 +01:00 [INF] [SIM PAYMENT] Payment processed for Order "9e98eb5f-c187-4d52-855b-6e6e42e4540f"
+2026-04-25 12:39:04.476 +01:00 [INF] [PAYMENT] Payment successful for Order "9e98eb5f-c187-4d52-855b-6e6e42e4540f".
+2026-04-25 12:39:04.625 +01:00 [INF] [INVENTORY] Confirming inventory update for Order "9e98eb5f-c187-4d52-855b-6e6e42e4540f".
+2026-04-25 12:39:04.625 +01:00 [INF] [INVENTORY] Stock reserved: ProductId="5f507403-0644-43fb-b8d5-3784228b778b", ProductName=Test Product, Quantity=30
+2026-04-25 12:39:04.647 +01:00 [INF] [INVENTORY] Inventory update confirmed for Order "9e98eb5f-c187-4d52-855b-6e6e42e4540f". 1 product(s) updated.
+2026-04-25 12:39:04.647 +01:00 [INF] [NOTIFICATION] Sending order confirmation to user3@test.com for Order "9e98eb5f-c187-4d52-855b-6e6e42e4540f".
+2026-04-25 12:39:04.647 +01:00 [INF] [SIM NOTIFICATION] Sending order confirmation to user3@test.com for Order "9e98eb5f-c187-4d52-855b-6e6e42e4540f" Amount=300.00
+2026-04-25 12:39:04.647 +01:00 [INF] [NOTIFICATION] Order confirmation sent to user3@test.com for Order "9e98eb5f-c187-4d52-855b-6e6e42e4540f".
+2026-04-25 15:00:17.432 +01:00 [INF] Starting up
+2026-04-25 15:00:17.957 +01:00 [INF] Using connection string: Data Source= db49437.public.databaseasp.net;Initial Catalog=db49437; user id = db49437; password = C-y36bP%pM=4;Encrypt=False;TrustServerCertificate=True;MultipleActiveResultSets=True;
+2026-04-25 15:00:24.310 +01:00 [INF] Seeded product -> Id: "11111111-1111-1111-1111-111111111111", Name: Widget A, Stock: 98
+2026-04-25 15:00:24.314 +01:00 [INF] Seeded product -> Id: "22222222-2222-2222-2222-222222222222", Name: Widget B, Stock: 50
+2026-04-25 15:00:24.436 +01:00 [INF] IdempotencyCleanupService started. TTL: "30.00:00:00"
+2026-04-25 15:00:26.623 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-04-25 15:00:26.949 +01:00 [INF] Received PlaceOrder request for user4@example.com with 1 items
+2026-04-25 15:00:26.949 +01:00 [INF] Received PlaceOrder request for user0@example.com with 1 items
+2026-04-25 15:00:26.949 +01:00 [INF] Received PlaceOrder request for user1@example.com with 1 items
+2026-04-25 15:00:26.949 +01:00 [INF] Received PlaceOrder request for user3@example.com with 1 items
+2026-04-25 15:00:26.949 +01:00 [INF] Received PlaceOrder request for user5@example.com with 1 items
+2026-04-25 15:00:26.949 +01:00 [INF] Received PlaceOrder request for user2@example.com with 1 items
+2026-04-25 15:00:27.625 +01:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-04-25 15:00:27.931 +01:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-04-25 15:00:28.310 +01:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-04-25 15:00:28.657 +01:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-04-25 15:00:28.842 +01:00 [INF] [EVENT] OrderPlaced received: OrderId="9b32c977-7f09-422f-9188-9f5c303d53a2", Customer=user3@example.com, Total=¤299.70, Items=1
+2026-04-25 15:00:28.846 +01:00 [INF] [PAYMENT] Initiating payment for Order "9b32c977-7f09-422f-9188-9f5c303d53a2", Amount: ¤299.70
+2026-04-25 15:00:29.035 +01:00 [INF] [EVENT] OrderPlaced received: OrderId="4c0659fd-30a1-47c3-83a0-c337fa3ec28f", Customer=user2@example.com, Total=¤299.70, Items=1
+2026-04-25 15:00:29.035 +01:00 [INF] [PAYMENT] Initiating payment for Order "4c0659fd-30a1-47c3-83a0-c337fa3ec28f", Amount: ¤299.70
+2026-04-25 15:00:29.432 +01:00 [INF] [EVENT] OrderPlaced received: OrderId="1c6c35be-4d0c-4b93-b2a4-76ed35d9468e", Customer=user1@example.com, Total=¤299.70, Items=1
+2026-04-25 15:00:29.432 +01:00 [INF] [PAYMENT] Initiating payment for Order "1c6c35be-4d0c-4b93-b2a4-76ed35d9468e", Amount: ¤299.70
+2026-04-25 15:00:29.456 +01:00 [INF] [SIM PAYMENT] Processing payment for Order "4c0659fd-30a1-47c3-83a0-c337fa3ec28f" Amount=299.70
+2026-04-25 15:00:29.608 +01:00 [WRN] Order placement failed: INSUFFICIENT_STOCK:11111111-1111-1111-1111-111111111111
+2026-04-25 15:00:29.662 +01:00 [INF] [SIM PAYMENT] Payment processed for Order "4c0659fd-30a1-47c3-83a0-c337fa3ec28f"
+2026-04-25 15:00:29.669 +01:00 [INF] [PAYMENT] Payment successful for Order "4c0659fd-30a1-47c3-83a0-c337fa3ec28f".
+2026-04-25 15:00:29.770 +01:00 [INF] [SIM PAYMENT] Processing payment for Order "1c6c35be-4d0c-4b93-b2a4-76ed35d9468e" Amount=299.70
+2026-04-25 15:00:29.774 +01:00 [WRN] Order placement failed: INSUFFICIENT_STOCK:11111111-1111-1111-1111-111111111111
+2026-04-25 15:00:29.847 +01:00 [INF] [INVENTORY] Confirming inventory update for Order "4c0659fd-30a1-47c3-83a0-c337fa3ec28f".
+2026-04-25 15:00:29.849 +01:00 [INF] [INVENTORY] Stock reserved: ProductId="11111111-1111-1111-1111-111111111111", ProductName=Widget A, Quantity=30
+2026-04-25 15:00:29.863 +01:00 [INF] [INVENTORY] Inventory update confirmed for Order "4c0659fd-30a1-47c3-83a0-c337fa3ec28f". 1 product(s) updated.
+2026-04-25 15:00:29.866 +01:00 [INF] [NOTIFICATION] Sending order confirmation to user2@example.com for Order "4c0659fd-30a1-47c3-83a0-c337fa3ec28f".
+2026-04-25 15:00:29.867 +01:00 [INF] [SIM NOTIFICATION] Sending order confirmation to user2@example.com for Order "4c0659fd-30a1-47c3-83a0-c337fa3ec28f" Amount=299.70
+2026-04-25 15:00:29.868 +01:00 [INF] [NOTIFICATION] Order confirmation sent to user2@example.com for Order "4c0659fd-30a1-47c3-83a0-c337fa3ec28f".
+2026-04-25 15:00:29.972 +01:00 [INF] [SIM PAYMENT] Payment processed for Order "1c6c35be-4d0c-4b93-b2a4-76ed35d9468e"
+2026-04-25 15:00:29.973 +01:00 [INF] [PAYMENT] Payment successful for Order "1c6c35be-4d0c-4b93-b2a4-76ed35d9468e".
+2026-04-25 15:00:30.173 +01:00 [INF] [INVENTORY] Confirming inventory update for Order "1c6c35be-4d0c-4b93-b2a4-76ed35d9468e".
+2026-04-25 15:00:30.174 +01:00 [INF] [SIM PAYMENT] Processing payment for Order "9b32c977-7f09-422f-9188-9f5c303d53a2" Amount=299.70
+2026-04-25 15:00:30.174 +01:00 [INF] [INVENTORY] Stock reserved: ProductId="11111111-1111-1111-1111-111111111111", ProductName=Widget A, Quantity=30
+2026-04-25 15:00:30.190 +01:00 [INF] [INVENTORY] Inventory update confirmed for Order "1c6c35be-4d0c-4b93-b2a4-76ed35d9468e". 1 product(s) updated.
+2026-04-25 15:00:30.191 +01:00 [INF] [NOTIFICATION] Sending order confirmation to user1@example.com for Order "1c6c35be-4d0c-4b93-b2a4-76ed35d9468e".
+2026-04-25 15:00:30.192 +01:00 [INF] [SIM NOTIFICATION] Sending order confirmation to user1@example.com for Order "1c6c35be-4d0c-4b93-b2a4-76ed35d9468e" Amount=299.70
+2026-04-25 15:00:30.192 +01:00 [INF] [NOTIFICATION] Order confirmation sent to user1@example.com for Order "1c6c35be-4d0c-4b93-b2a4-76ed35d9468e".
+2026-04-25 15:00:30.378 +01:00 [INF] [SIM PAYMENT] Payment processed for Order "9b32c977-7f09-422f-9188-9f5c303d53a2"
+2026-04-25 15:00:30.378 +01:00 [INF] [PAYMENT] Payment successful for Order "9b32c977-7f09-422f-9188-9f5c303d53a2".
+2026-04-25 15:00:30.467 +01:00 [WRN] Order placement failed: INSUFFICIENT_STOCK:11111111-1111-1111-1111-111111111111
+2026-04-25 15:00:30.564 +01:00 [INF] [INVENTORY] Confirming inventory update for Order "9b32c977-7f09-422f-9188-9f5c303d53a2".
+2026-04-25 15:00:30.564 +01:00 [INF] [INVENTORY] Stock reserved: ProductId="11111111-1111-1111-1111-111111111111", ProductName=Widget A, Quantity=30
+2026-04-25 15:00:30.642 +01:00 [INF] [INVENTORY] Inventory update confirmed for Order "9b32c977-7f09-422f-9188-9f5c303d53a2". 1 product(s) updated.
+2026-04-25 15:00:30.643 +01:00 [INF] [NOTIFICATION] Sending order confirmation to user3@example.com for Order "9b32c977-7f09-422f-9188-9f5c303d53a2".
+2026-04-25 15:00:30.643 +01:00 [INF] [SIM NOTIFICATION] Sending order confirmation to user3@example.com for Order "9b32c977-7f09-422f-9188-9f5c303d53a2" Amount=299.70
+2026-04-25 15:00:30.644 +01:00 [INF] [NOTIFICATION] Order confirmation sent to user3@example.com for Order "9b32c977-7f09-422f-9188-9f5c303d53a2".

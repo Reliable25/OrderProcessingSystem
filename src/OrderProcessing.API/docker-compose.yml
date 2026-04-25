@@ -1,0 +1,30 @@
+﻿version: '3.8'
+
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql
+    environment:
+      SA_PASSWORD: ${SA_PASSWORD}
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    healthcheck:
+      test: ["CMD-SHELL", "echo 'SELECT 1' | /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P $$SA_PASSWORD || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+      start_period: 20s
+
+  api:
+    build:
+      context: ../..
+      dockerfile: src/OrderProcessing.API/Dockerfile
+    depends_on:
+      - mssql
+    environment:
+      ConnectionStrings__DefaultConnection: "Server=mssql;Database=${DB_NAME};User Id=sa;Password=${SA_PASSWORD};TrustServerCertificate=True;"
+      ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT}
+    ports:
+      - "5000:80"
+    restart: on-failure
